@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background: rgb(0, 0, 0);
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   
+}
+
+.mainimg{
+    
+    display: flex;
+  flex-direction: column;
+    
+    
+    @media(max-width:"768px"){
+        display: flex;
+        
+    }
+    text-align: center;
+    p{
+        display: none;
+        justify-content: center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: white;
+        font-size: 9px;
+        @media(max-width:768px){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: appear 6s infinite;
+        }
+    }
+   
+    &:hover{
+        p{
+            display: flex;
+            animation: appear 6s infinite;
+        }
+    }
+#main{
+    @media(max-width:"768px"){
+        margin-top: 10px;
+    }
+    width: 80%;
+    &:hover{
+        width: 60%;
+        transition: ease 1s all;
+        
+        
+    }
+    &:not(:hover){
+        
+        transition: ease 1s all;
+    }
+}
+
+
+}
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
